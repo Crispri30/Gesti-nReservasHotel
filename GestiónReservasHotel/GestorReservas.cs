@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GestiónReservasHotel
 {
@@ -49,34 +50,41 @@ namespace GestiónReservasHotel
         }
 
 
-        public bool EliminarReserva(int numeroHabitacion)
+        public bool EliminarReserva(int numeroHabitacion, DateTime fechaReserva, string nombreCliente)
         {
             //Busqueda de reserva por numero de habitacion
-            var reserva = reservas.Find(r => r.NumeroHabitacion == numeroHabitacion);
+            var reserva = reservas.Find(r => r.NumeroHabitacion == numeroHabitacion &&
+            r.FechaReserva == fechaReserva && r.NombreCliente == nombreCliente);
 
             //si existe la elimina
             if (reserva != null) { 
                 reservas.Remove(reserva);
                 return true;
             }
-            return false;
+            else
+            {
+                MessageBox.Show("Reserva no encontrada");
+            }
+                return false;
         }
 
         //Editar la reserva
-        public bool EditarReserva(int numeroHabitacion, string nuevoNombre, DateTime nuevaFecha, int nuevaDuracion)
+        public void EditarReserva(int numeroHabitacion, string nombreCliente, DateTime nuevaFecha, int nuevaDuracion, int nuevaTarifa, TipoHabitacion tipo)
         {
             //Buscar la reserva por numero de habitacion
-            var reserva = reservas.Find(r => r.NumeroHabitacion == numeroHabitacion);
+            var reserva = reservas.Find(r => r.NumeroHabitacion == numeroHabitacion &&
+            r.NombreCliente == nombreCliente);
             if (reserva != null)
             {
-                reserva.NombreCliente = nuevoNombre;
                 reserva.FechaReserva = nuevaFecha;
                 reserva.DuracionEstadia = nuevaDuracion;
-
-                return true;
+                reserva.TarifaFija = nuevaTarifa;
+                reserva.Tipo = tipo;
             }
-            return false;
-            
+            else
+            {
+                MessageBox.Show("Reserva no encontrada.");
+            }
         }
 
         //listar reservas
@@ -84,6 +92,5 @@ namespace GestiónReservasHotel
         {
             return reservas;
         }
-
     }
 }
