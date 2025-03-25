@@ -22,8 +22,9 @@ namespace GestiónReservasHotel
         private void Form1_Load(object sender, EventArgs e)
         {
             // Agregar las opciones al ComboBox
-            cmbTipoHabitacion.Items.Add("Estandar");
-            cmbTipoHabitacion.Items.Add("VIP");
+
+            cmbTipoHabitacion.DataSource = Enum.GetValues(typeof(TipoHabitacion));
+            
         }
 
         private void bttAgregar_Click(object sender, EventArgs e)
@@ -36,21 +37,21 @@ namespace GestiónReservasHotel
                 int duracionEstadia = int.Parse(txtDuracionEstadia.Text);
                 int tarifaFija = int.Parse(txtTarifa.Text);
 
-                TipoHabitacion tipo;
-                if (cmbTipoHabitacion.SelectedItem.ToString() == "Estandar")
+                
+                if (!Enum.TryParse(cmbTipoHabitacion.SelectedItem.ToString(), out TipoHabitacion tipo))
                 {
-                    tipo = TipoHabitacion.Estandar;
+                    MessageBox.Show("Error: Tipo de habitación no válido.");
+                    return;
                 }
-                else
-                {
-                    tipo = TipoHabitacion.VIP;
-                }
+
+
 
                 //Creacion nueva reserva
                 Reserva nuevaReserva = ReservaFactory.CrearReserva(tipo, nombreCliente,numeroHabitacion,fechaReserva,duracionEstadia,tarifaFija);
                 gestor.AgregarReserva(nuevaReserva);
+                lstReservas.Items.Add(nuevaReserva);
 
-                
+                cmbTipoHabitacion.SelectedIndex = 0;
                 txtDuracionEstadia.Clear();
                 txtNombreCliente.Clear();
                 txtNumeroHabitacion.Clear();
@@ -101,6 +102,11 @@ namespace GestiónReservasHotel
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace GestiónReservasHotel
         public int TarifaFija {  get; set; }
 
         public HabitacionEstandar(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifaFija)
-            : base(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia) 
+            : base(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifaFija,  TipoHabitacion.Estandar) 
         {
             TarifaFija = tarifaFija;
         }

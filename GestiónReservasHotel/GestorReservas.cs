@@ -44,6 +44,8 @@ namespace GestiónReservasHotel
             }
 
             reservas.Add(nuevaReserva);
+            
+            
         }
 
 

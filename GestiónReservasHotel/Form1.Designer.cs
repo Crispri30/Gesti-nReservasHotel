@@ -41,7 +41,7 @@
             this.bttAgregar = new System.Windows.Forms.Button();
             this.bttEditar = new System.Windows.Forms.Button();
             this.bttEliminar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstReservas = new System.Windows.Forms.ListBox();
             this.txtTarifa = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -157,13 +157,14 @@
             this.bttEliminar.UseVisualStyleBackColor = true;
             this.bttEliminar.Click += new System.EventHandler(this.bttEliminar_Click);
             // 
-            // listBox1
+            // lstReservas
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(415, 31);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(344, 342);
-            this.listBox1.TabIndex = 14;
+            this.lstReservas.FormattingEnabled = true;
+            this.lstReservas.Location = new System.Drawing.Point(415, 31);
+            this.lstReservas.Name = "lstReservas";
+            this.lstReservas.Size = new System.Drawing.Size(468, 342);
+            this.lstReservas.TabIndex = 14;
+            this.lstReservas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // txtTarifa
             // 
@@ -186,10 +187,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(912, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTarifa);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstReservas);
             this.Controls.Add(this.bttEliminar);
             this.Controls.Add(this.bttEditar);
             this.Controls.Add(this.bttAgregar);
@@ -226,7 +227,7 @@
         private System.Windows.Forms.Button bttAgregar;
         private System.Windows.Forms.Button bttEditar;
         private System.Windows.Forms.Button bttEliminar;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstReservas;
         private System.Windows.Forms.TextBox txtTarifa;
         private System.Windows.Forms.Label label6;
     }
