@@ -44,8 +44,6 @@ namespace GestiónReservasHotel
                     return;
                 }
 
-
-
                 //Creacion nueva reserva
                 Reserva nuevaReserva = ReservaFactory.CrearReserva(tipo, nombreCliente,numeroHabitacion,fechaReserva,duracionEstadia,tarifaFija);
                 gestor.AgregarReserva(nuevaReserva);
@@ -68,15 +66,32 @@ namespace GestiónReservasHotel
         {
             try
             {
+
                 string nombreCliente = txtNombreCliente.Text;
                 DateTime fechaReserva = DateTime.Parse(datetime.Text);
                 int numeroHabitacion = int.Parse(txtNumeroHabitacion.Text);
                 int duracionEstadia = int.Parse(txtDuracionEstadia.Text);
+                int tarifaFija = int.Parse(txtTarifa.Text);
 
+                if (!Enum.TryParse(cmbTipoHabitacion.SelectedItem.ToString(), out TipoHabitacion tipo))
+                {
+                    MessageBox.Show("Error: Tipo de habitación no válido.");
+                    return;
+                }
+
+                gestor.EditarReserva(numeroHabitacion, nombreCliente, fechaReserva, duracionEstadia, tarifaFija, tipo);
+
+                lstReservas.Items.Clear();
+                foreach (var reserva in gestor.ObtenerReservas())
+                {
+                    lstReservas.Items.Add(reserva);
+                }
 
                 txtDuracionEstadia.Clear();
                 txtNombreCliente.Clear();
                 txtNumeroHabitacion.Clear();
+                txtTarifa.Clear();
+
             }
             catch (Exception ex)
             {
@@ -93,6 +108,13 @@ namespace GestiónReservasHotel
                 int numeroHabitacion = int.Parse(txtNumeroHabitacion.Text);
                 int duracionEstadia = int.Parse(txtDuracionEstadia.Text);
 
+                gestor.EliminarReserva(numeroHabitacion, fechaReserva, nombreCliente);
+
+                lstReservas.Items.Clear();
+                foreach (var reserva in gestor.ObtenerReservas())
+                {
+                    lstReservas.Items.Add(reserva);
+                }
 
                 txtDuracionEstadia.Clear();
                 txtNombreCliente.Clear();
@@ -105,6 +127,11 @@ namespace GestiónReservasHotel
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDuracionEstadia_TextChanged(object sender, EventArgs e)
         {
 
         }
