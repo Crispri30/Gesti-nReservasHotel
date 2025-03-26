@@ -53,58 +53,58 @@
             // cmbTipoHabitacion
             // 
             this.cmbTipoHabitacion.BackColor = System.Drawing.Color.Linen;
-            this.cmbTipoHabitacion.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.cmbTipoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cmbTipoHabitacion.FormattingEnabled = true;
             this.cmbTipoHabitacion.Location = new System.Drawing.Point(251, 281);
             this.cmbTipoHabitacion.Name = "cmbTipoHabitacion";
-            this.cmbTipoHabitacion.Size = new System.Drawing.Size(309, 27);
+            this.cmbTipoHabitacion.Size = new System.Drawing.Size(309, 28);
             this.cmbTipoHabitacion.TabIndex = 0;
             // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.BackColor = System.Drawing.Color.Linen;
-            this.txtNombreCliente.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCliente.Location = new System.Drawing.Point(251, 237);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(309, 27);
+            this.txtNombreCliente.Size = new System.Drawing.Size(309, 26);
             this.txtNombreCliente.TabIndex = 1;
             // 
             // txtNumeroHabitacion
             // 
             this.txtNumeroHabitacion.BackColor = System.Drawing.Color.Linen;
-            this.txtNumeroHabitacion.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.txtNumeroHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtNumeroHabitacion.Location = new System.Drawing.Point(251, 369);
             this.txtNumeroHabitacion.Name = "txtNumeroHabitacion";
-            this.txtNumeroHabitacion.Size = new System.Drawing.Size(309, 27);
+            this.txtNumeroHabitacion.Size = new System.Drawing.Size(309, 26);
             this.txtNumeroHabitacion.TabIndex = 2;
             // 
             // txtDuracionEstadia
             // 
             this.txtDuracionEstadia.BackColor = System.Drawing.Color.Linen;
-            this.txtDuracionEstadia.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDuracionEstadia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtDuracionEstadia.Location = new System.Drawing.Point(251, 413);
             this.txtDuracionEstadia.Name = "txtDuracionEstadia";
-            this.txtDuracionEstadia.Size = new System.Drawing.Size(309, 27);
+            this.txtDuracionEstadia.Size = new System.Drawing.Size(309, 26);
             this.txtDuracionEstadia.TabIndex = 3;
             this.txtDuracionEstadia.TextChanged += new System.EventHandler(this.txtDuracionEstadia_TextChanged);
             // 
             // datetime
             // 
             this.datetime.CalendarMonthBackground = System.Drawing.Color.Linen;
-            this.datetime.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datetime.Location = new System.Drawing.Point(251, 323);
             this.datetime.Name = "datetime";
-            this.datetime.Size = new System.Drawing.Size(309, 27);
+            this.datetime.Size = new System.Drawing.Size(309, 26);
             this.datetime.TabIndex = 4;
             // 
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
             this.lblNombreCliente.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblNombreCliente.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreCliente.Location = new System.Drawing.Point(26, 240);
             this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(159, 19);
+            this.lblNombreCliente.Size = new System.Drawing.Size(134, 20);
             this.lblNombreCliente.TabIndex = 5;
             this.lblNombreCliente.Text = "Nombre cliente:";
             // 
@@ -112,10 +112,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.PeachPuff;
-            this.label2.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(26, 372);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 19);
+            this.label2.Size = new System.Drawing.Size(189, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Numero de habitación:";
             // 
@@ -123,10 +123,10 @@
             // 
             this.lblFechaReserva.AutoSize = true;
             this.lblFechaReserva.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblFechaReserva.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaReserva.Location = new System.Drawing.Point(26, 329);
             this.lblFechaReserva.Name = "lblFechaReserva";
-            this.lblFechaReserva.Size = new System.Drawing.Size(179, 19);
+            this.lblFechaReserva.Size = new System.Drawing.Size(153, 20);
             this.lblFechaReserva.TabIndex = 7;
             this.lblFechaReserva.Text = "Fecha de reserva:";
             // 
@@ -134,10 +134,10 @@
             // 
             this.lblTipoHabitacion.AutoSize = true;
             this.lblTipoHabitacion.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblTipoHabitacion.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTipoHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblTipoHabitacion.Location = new System.Drawing.Point(26, 284);
             this.lblTipoHabitacion.Name = "lblTipoHabitacion";
-            this.lblTipoHabitacion.Size = new System.Drawing.Size(199, 19);
+            this.lblTipoHabitacion.Size = new System.Drawing.Size(161, 20);
             this.lblTipoHabitacion.TabIndex = 8;
             this.lblTipoHabitacion.Text = "Tipo de habitación:";
             // 
@@ -145,17 +145,17 @@
             // 
             this.lblDuracionEstadia.AutoSize = true;
             this.lblDuracionEstadia.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblDuracionEstadia.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDuracionEstadia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblDuracionEstadia.Location = new System.Drawing.Point(26, 416);
             this.lblDuracionEstadia.Name = "lblDuracionEstadia";
-            this.lblDuracionEstadia.Size = new System.Drawing.Size(179, 19);
+            this.lblDuracionEstadia.Size = new System.Drawing.Size(150, 20);
             this.lblDuracionEstadia.TabIndex = 9;
-            this.lblDuracionEstadia.Text = "Duracion estadia:";
+            this.lblDuracionEstadia.Text = "Duracion estadía:";
             // 
             // bttAgregar
             // 
             this.bttAgregar.BackColor = System.Drawing.Color.BurlyWood;
-            this.bttAgregar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.bttAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.bttAgregar.Location = new System.Drawing.Point(30, 523);
             this.bttAgregar.Name = "bttAgregar";
             this.bttAgregar.Size = new System.Drawing.Size(137, 69);
@@ -167,7 +167,7 @@
             // bttEditar
             // 
             this.bttEditar.BackColor = System.Drawing.Color.BurlyWood;
-            this.bttEditar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.bttEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.bttEditar.Location = new System.Drawing.Point(231, 523);
             this.bttEditar.Name = "bttEditar";
             this.bttEditar.Size = new System.Drawing.Size(137, 69);
@@ -179,7 +179,7 @@
             // bttEliminar
             // 
             this.bttEliminar.BackColor = System.Drawing.Color.BurlyWood;
-            this.bttEliminar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.bttEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.bttEliminar.Location = new System.Drawing.Point(423, 523);
             this.bttEliminar.Name = "bttEliminar";
             this.bttEliminar.Size = new System.Drawing.Size(137, 69);
@@ -191,33 +191,32 @@
             // lstReservas
             // 
             this.lstReservas.BackColor = System.Drawing.Color.Linen;
-            this.lstReservas.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstReservas.FormattingEnabled = true;
-            this.lstReservas.ItemHeight = 14;
             this.lstReservas.Location = new System.Drawing.Point(588, 240);
             this.lstReservas.Name = "lstReservas";
-            this.lstReservas.Size = new System.Drawing.Size(628, 354);
+            this.lstReservas.Size = new System.Drawing.Size(628, 342);
             this.lstReservas.TabIndex = 14;
             this.lstReservas.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // txtTarifa
             // 
             this.txtTarifa.BackColor = System.Drawing.Color.Linen;
-            this.txtTarifa.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTarifa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTarifa.Location = new System.Drawing.Point(251, 456);
             this.txtTarifa.Name = "txtTarifa";
-            this.txtTarifa.Size = new System.Drawing.Size(309, 27);
+            this.txtTarifa.Size = new System.Drawing.Size(309, 26);
             this.txtTarifa.TabIndex = 15;
             // 
             // lblTarifaFija
             // 
             this.lblTarifaFija.AutoSize = true;
             this.lblTarifaFija.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblTarifaFija.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTarifaFija.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblTarifaFija.Location = new System.Drawing.Point(26, 459);
             this.lblTarifaFija.Name = "lblTarifaFija";
             this.lblTarifaFija.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTarifaFija.Size = new System.Drawing.Size(129, 19);
+            this.lblTarifaFija.Size = new System.Drawing.Size(89, 20);
             this.lblTarifaFija.TabIndex = 16;
             this.lblTarifaFija.Text = "Tarifa fija:";
             // 
@@ -225,10 +224,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.PeachPuff;
-            this.label1.Font = new System.Drawing.Font("Unispace", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(517, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 39);
+            this.label1.Size = new System.Drawing.Size(187, 37);
             this.label1.TabIndex = 17;
             this.label1.Text = "CC HOTEL";
             // 
@@ -236,10 +235,10 @@
             // 
             this.lblFormularioReservas.AutoSize = true;
             this.lblFormularioReservas.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblFormularioReservas.Font = new System.Drawing.Font("Unispace", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormularioReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormularioReservas.Location = new System.Drawing.Point(434, 146);
             this.lblFormularioReservas.Name = "lblFormularioReservas";
-            this.lblFormularioReservas.Size = new System.Drawing.Size(367, 33);
+            this.lblFormularioReservas.Size = new System.Drawing.Size(314, 31);
             this.lblFormularioReservas.TabIndex = 18;
             this.lblFormularioReservas.Text = "Formulario de reservas";
             // 

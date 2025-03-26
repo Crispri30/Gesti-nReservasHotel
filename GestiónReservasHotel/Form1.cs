@@ -36,18 +36,20 @@ namespace GestiónReservasHotel
                 int numeroHabitacion = int.Parse(txtNumeroHabitacion.Text);
                 int duracionEstadia = int.Parse(txtDuracionEstadia.Text);
                 int tarifaFija = int.Parse(txtTarifa.Text);
+                int tarifaTotal = 0;
 
                 
                 if (!Enum.TryParse(cmbTipoHabitacion.SelectedItem.ToString(), out TipoHabitacion tipo))
                 {
                     MessageBox.Show("Error: Tipo de habitación no válido.");
-                    return;
                 }
 
                 //Creacion nueva reserva
-                Reserva nuevaReserva = ReservaFactory.CrearReserva(tipo, nombreCliente,numeroHabitacion,fechaReserva,duracionEstadia,tarifaFija);
+                Reserva nuevaReserva = ReservaFactory.CrearReserva(tipo, nombreCliente,numeroHabitacion,fechaReserva,duracionEstadia,tarifaFija, tarifaTotal);
+                nuevaReserva.TarifaTotal = nuevaReserva.CalcularCostoTotal();
                 gestor.AgregarReserva(nuevaReserva);
                 lstReservas.Items.Add(nuevaReserva);
+                
 
                 cmbTipoHabitacion.SelectedIndex = 0;
                 txtDuracionEstadia.Clear();
@@ -80,6 +82,8 @@ namespace GestiónReservasHotel
                 }
 
                 gestor.EditarReserva(numeroHabitacion, nombreCliente, fechaReserva, duracionEstadia, tarifaFija, tipo);
+
+                
 
                 lstReservas.Items.Clear();
                 foreach (var reserva in gestor.ObtenerReservas())

@@ -14,15 +14,15 @@ namespace GestiónReservasHotel
     }
     public static class ReservaFactory
     {
-        public static Reserva CrearReserva(TipoHabitacion tipo, string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifa)
+        public static Reserva CrearReserva(TipoHabitacion tipo, string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifa, double tarifaTotal)
         {
             switch (tipo)
              {
                 case TipoHabitacion.Estandar:
-                  return new HabitacionEstandar(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifa);
+                  return new HabitacionEstandar(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifa,tarifaTotal);
 
                 case TipoHabitacion.VIP:
-                  return new HabitacionVip(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifa);
+                  return new HabitacionVip(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifa, tarifaTotal);
 
                 default:
                   throw new ArgumentException("Tipo de habitación no válido.");

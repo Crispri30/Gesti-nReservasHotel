@@ -8,17 +8,16 @@ namespace GestiónReservasHotel
 {
     public class HabitacionEstandar : Reserva
     {
-        public int TarifaFija {  get; set; }
 
-        public HabitacionEstandar(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifaFija)
-            : base(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifaFija,  TipoHabitacion.Estandar) 
+        public HabitacionEstandar(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifaFija, double tarifaTotal)
+            : base(nombreCliente, numeroHabitacion, fechaReserva, duracionEstadia, tarifaFija,  TipoHabitacion.Estandar, tarifaTotal) 
         {
             TarifaFija = tarifaFija;
         }
         
         public override double CalcularCostoTotal()
         {
-            return TarifaFija * DuracionEstadia;
+            return TarifaTotal = TarifaFija * DuracionEstadia;
         }
     }
 }

@@ -15,7 +15,9 @@ namespace GestiónReservasHotel
         public int TarifaFija {  get; set; }
         public TipoHabitacion Tipo { get; set; }
 
-        protected Reserva(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifaFija, TipoHabitacion tipo)
+        public double TarifaTotal { get; set; }
+
+        protected Reserva(string nombreCliente, int numeroHabitacion, DateTime fechaReserva, int duracionEstadia, int tarifaFija, TipoHabitacion tipo, double tarifaTotal)
         {
             if (string.IsNullOrWhiteSpace(nombreCliente))
             {
@@ -36,17 +38,23 @@ namespace GestiónReservasHotel
                 throw new ArgumentException("La fecha no puede estar vacía");
             }
 
+            if (tarifaFija < 1 )
+            {
+                throw new ArgumentException("La tarifa no debe ser menor a 1");
+            }
+
             NombreCliente = nombreCliente;
             NumeroHabitacion = numeroHabitacion;
             FechaReserva = fechaReserva;
             DuracionEstadia = duracionEstadia;
             TarifaFija = tarifaFija;
             Tipo = tipo;
+            TarifaTotal = tarifaTotal;
         }
 
         public override string ToString()
         {
-            return $"{NombreCliente} - Habitación {NumeroHabitacion} - {Tipo} - {FechaReserva.ToShortDateString()} - {DuracionEstadia} días - {TarifaFija}";
+            return $"{NombreCliente} - Habitación {NumeroHabitacion} - {Tipo} - {FechaReserva.ToShortDateString()} - {DuracionEstadia} días - ${TarifaTotal}";
         }
 
         public abstract double CalcularCostoTotal();
